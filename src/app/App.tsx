@@ -163,8 +163,6 @@ export default function App() {
           transition={{ duration: 0.5 }}
           className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl p-12 relative overflow-hidden"
         >
-          <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-emerald-500 via-blue-500 to-violet-500" />
-
           <div className="text-center mb-8">
             <motion.div
               initial={{ scale: 0 }}
@@ -258,7 +256,8 @@ export default function App() {
 
           <button
             onClick={resetQuiz}
-            className="w-full bg-gradient-to-r from-emerald-500 to-blue-500 text-white py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+            className="w-full py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+            style={{ background: "#2563eb", color: "#000000" }}
           >
             <RotateCcw className="w-5 h-5" />
             Start New Quiz
@@ -343,7 +342,8 @@ export default function App() {
 
           <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-gradient-to-r from-emerald-500 via-blue-500 to-violet-500"
+              className="h-full"
+              style={{ background: "#2563eb" }}
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.3 }}
@@ -358,10 +358,9 @@ export default function App() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3 }}
-            className="bg-white rounded-2xl shadow-2xl p-8 relative overflow-hidden"
+            className="bg-white rounded-2xl shadow-2xl p-8 relative overflow-hidden border-2"
+            style={{ borderColor: "#88F1FF" }}
           >
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-blue-500 to-violet-500" />
-
             <div className="mb-6">
               {currentQ.topic && (
                 <span
@@ -476,7 +475,8 @@ export default function App() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
                 onClick={handleNext}
-                className="w-full bg-gradient-to-r from-emerald-500 to-blue-500 text-white py-4 rounded-xl font-semibold text-lg hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+                className="w-full py-4 rounded-xl font-semibold text-lg hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+                style={{ background: "#2563eb", color: "#ffffff" }}
               >
                 {currentQuestion < questions.length - 1
                   ? "Next Question"
