@@ -235,23 +235,50 @@ export default function App() {
           )}
 
           {score < questions.length && (
-            <button
-              onClick={() => {
-                const incorrectQuestions = questions.filter(
-                  (_, i) => !answers[i],
-                );
-                setReviewQuestions(incorrectQuestions);
-                setCurrentQuestion(0);
-                setSelectedAnswer(null);
-                setShowExplanation(false);
-                setScore(0);
-                setAnswers([]);
-                setQuizState("review");
-              }}
-              className="w-full mb-4 bg-white border-2 border-blue-500 text-blue-600 py-4 rounded-xl font-semibold text-lg hover:bg-blue-50 transition-all duration-300"
-            >
-              Retry Incorrect Questions
-            </button>
+            <div className="mb-6 p-6 bg-red-50 rounded-xl border-2 border-red-200">
+              <h3
+                className="mb-4 text-lg font-semibold"
+                style={{ color: "#dc2626" }}
+              >
+                Incorrect Answers
+              </h3>
+              <div className="space-y-4">
+                {questions
+                  .map((question, index) => ({
+                    question,
+                    index,
+                    wasCorrect: answers[index],
+                  }))
+                  .filter((item) => !item.wasCorrect)
+                  .map(({ question, index }) => {
+                    const correctIndex =
+                      question.correctAnswer ?? question.correct;
+
+                    return (
+                      <div
+                        key={question.id ?? index}
+                        className="p-4 bg-white rounded-lg border border-red-100"
+                      >
+                        <p
+                          className="font-semibold mb-2"
+                          style={{ color: "#1a1a1a" }}
+                        >
+                          {index + 1}. {question.question}
+                        </p>
+                        <p className="text-sm text-gray-600 mb-1">
+                          Correct answer:{" "}
+                          {correctIndex !== undefined
+                            ? question.options[correctIndex]
+                            : "Not set"}
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          Explanation: {question.explanation}
+                        </p>
+                      </div>
+                    );
+                  })}
+              </div>
+            </div>
           )}
 
           <button
