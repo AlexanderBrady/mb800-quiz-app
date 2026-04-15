@@ -331,7 +331,7 @@ export default function App() {
             >
               {quizState === "review"
                 ? "Review Incorrect Questions"
-                : "Business Central Quiz"}
+                : "MB-800 Business Central Test"}
             </h1>
             <div className="text-right">
               <div className="text-sm text-gray-500">Question</div>
