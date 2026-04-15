@@ -1,0 +1,1039 @@
+[
+  {
+    "id": "mb800_001",
+    "question": "You need to report profitability by business line. How should you configure the system?",
+    "options": [
+      "Use dimensions to track business lines",
+      "Use posting groups only",
+      "Use G/L accounts for each business line",
+      "Use number series"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Dimensions are used to analyse financial data (like profitability) without changing the chart of accounts. This is the standard way to track business lines."
+  },
+  {
+    "id": "mb800_002",
+    "question": "You need to configure discounting for sales. Which actions should you perform in sequence?",
+    "options": [
+      "Create customer discount group → Create item discount group → Configure discount posting → Define sales line discounts",
+      "Define sales line discounts → Create customer → Configure VAT → Post invoice",
+      "Create item → Assign posting group → Create customer discount group → Post order",
+      "Configure posting groups → Create dimension → Apply discounts → Post invoice"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Discount setup flows from structure → grouping → posting → execution."
+  },
+  {
+    "id": "mb800_003",
+    "question": "You need to configure the system to meet the requirements for received items. What should you do?",
+    "options": [
+      "Set default costing method to Standard",
+      "Turn on Automatic Cost Posting",
+      "Turn on Expected Cost Posting",
+      "Set Automatic Cost Adjustment to Always"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Expected Cost Posting recognises costs before invoicing."
+  },
+  {
+    "id": "mb800_004",
+    "question": "You need to configure General Posting Setup efficiently using a chart of accounts. What are valid approaches?",
+    "options": [
+      "Use Copy action",
+      "Import configuration package",
+      "Use Suggest Accounts",
+      "Manually create all combinations only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Configuration packages are the most scalable approach."
+  },
+  {
+    "id": "mb800_005",
+    "question": "You need to allow receipt of quantities greater than ordered. What should you do?",
+    "options": [
+      "Set maximum order quantity",
+      "Set maximum inventory level",
+      "Set over-receipt code on item",
+      "Set over-receipt code on vendor"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Over-receipt codes allow flexible receiving."
+  },
+  {
+    "id": "mb800_006",
+    "question": "Which item type should be used for infinite items like water or electricity?",
+    "options": ["Resource", "Inventory", "Service", "Non-inventory"],
+    "correctAnswer": 3,
+    "explanation": "Non-inventory = no stock tracking."
+  },
+  {
+    "id": "mb800_007",
+    "question": "The G/L account for accounts receivable must match the sum of all customer balances. What should you configure?",
+    "options": ["Account Type", "Blocked", "Totaling", "Direct Posting"],
+    "correctAnswer": 2,
+    "explanation": "Totaling ensures correct roll-up."
+  },
+  {
+    "id": "mb800_008",
+    "question": "You need to add users to Business Central Online for the first time. What should you do?",
+    "options": [
+      "Get new users from Office 365",
+      "Create users manually",
+      "Update users from Office 365",
+      "Import user groups"
+    ],
+    "correctAnswer": 0,
+    "explanation": "BC Online pulls users from M365."
+  },
+  {
+    "id": "mb800_009",
+    "question": "You need to create many similar items efficiently. What should you do?",
+    "options": [
+      "Create item templates",
+      "Use Save as Template on item card",
+      "Apply template when creating new item",
+      "Create each item manually"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Templates standardise creation."
+  },
+  {
+    "id": "mb800_010",
+    "question": "Monetary amounts must always display three decimal places. What should you configure?",
+    "options": [
+      "Amount Decimal Places = 3:3",
+      "Unit Amount Decimal Places = 3:3",
+      "Rounding Precision = 0.001",
+      "Unit Rounding Precision = 0.001"
+    ],
+    "correctAnswer": 0,
+    "explanation": "3:3 enforces fixed decimals."
+  },
+
+  {
+    "id": "mb800_011",
+    "question": "You need to configure General Posting Setup efficiently. Which actions are valid?",
+    "options": [
+      "Import configuration package",
+      "Use Suggest Accounts",
+      "Copy existing setup",
+      "Delete all accounts"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Multiple valid approaches exist, config packages are key."
+  },
+  {
+    "id": "mb800_012",
+    "question": "You need to configure receipt of quantities greater than ordered. Which options are valid?",
+    "options": [
+      "Use over-receipt code on item",
+      "Use over-receipt code on vendor",
+      "Set inventory threshold",
+      "Disable receiving"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Over-receipt codes control excess receiving."
+  },
+  {
+    "id": "mb800_013",
+    "question": "A vendor sends a combined invoice weekly. How should you process purchase invoices?",
+    "options": [
+      "Use Get Receipt Lines to combine receipts",
+      "Create separate invoices",
+      "Ignore receipts",
+      "Post directly to G/L"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Combining receipts is standard process."
+  },
+  {
+    "id": "mb800_014",
+    "question": "Which setup links bank accounts to G/L?",
+    "options": [
+      "Bank Account Posting Group",
+      "General Posting Setup",
+      "Customer Posting Group",
+      "Inventory Posting Group"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Bank accounts are tied via posting groups."
+  },
+  {
+    "id": "mb800_015",
+    "question": "Which item type should be used when no inventory tracking is needed?",
+    "options": ["Inventory", "Service", "Non-inventory", "Resource"],
+    "correctAnswer": 2,
+    "explanation": "Non-inventory items are not tracked in stock."
+  },
+  {
+    "id": "mb800_016",
+    "question": "How do you efficiently create similar items?",
+    "options": [
+      "Use templates",
+      "Duplicate manually",
+      "Export/import Excel",
+      "Rebuild each item"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Templates = speed + consistency."
+  },
+  {
+    "id": "mb800_017",
+    "question": "Which feature allows combining multiple receipts into one invoice?",
+    "options": [
+      "Get Receipt Lines",
+      "Post Batch",
+      "General Journal",
+      "Item Journal"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is core purchase flow."
+  },
+  {
+    "id": "mb800_018",
+    "question": "Which feature helps automate posting setup combinations?",
+    "options": ["Suggest Accounts", "Dimensions", "Templates", "Workflows"],
+    "correctAnswer": 0,
+    "explanation": "Suggest Accounts builds combinations automatically."
+  },
+  {
+    "id": "mb800_019",
+    "question": "Which item type is used for services sold without stock?",
+    "options": ["Inventory", "Service", "Non-inventory", "Resource"],
+    "correctAnswer": 1,
+    "explanation": "Service items represent labour/services."
+  },
+  {
+    "id": "mb800_020",
+    "question": "Which feature is used to import large volumes of setup data?",
+    "options": [
+      "Configuration Packages",
+      "Dimensions",
+      "Posting Groups",
+      "Workflows"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Config packages = bulk data import/export."
+  },
+  {
+    "id": "mb800_021",
+    "question": "You need to analyse sales by both customer type and product type. What should you configure?",
+    "options": [
+      "General Business Posting Groups and General Product Posting Groups",
+      "Customer Posting Groups only",
+      "Dimensions only",
+      "G/L Accounts only"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Business = who you sell to, Product = what you sell. Together they drive posting + analysis."
+  },
+  {
+    "id": "mb800_022",
+    "question": "You need to track financial data without changing the chart of accounts. What should you use?",
+    "options": ["Dimensions", "Posting Groups", "Number Series", "Templates"],
+    "correctAnswer": 0,
+    "explanation": "Dimensions are specifically designed for flexible analysis without restructuring accounts."
+  },
+  {
+    "id": "mb800_023",
+    "question": "You need to automate applying payments to invoices. What should you configure?",
+    "options": [
+      "Payment Application Rules",
+      "General Journals",
+      "Posting Groups",
+      "Dimensions"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Payment Application Rules automate matching payments to invoices."
+  },
+  {
+    "id": "mb800_024",
+    "question": "You need to ensure inventory costs are updated automatically. What should you configure?",
+    "options": [
+      "Automatic Cost Adjustment",
+      "Posting Groups",
+      "Dimensions",
+      "Item Templates"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Automatic Cost Adjustment ensures costs are kept up to date."
+  },
+  {
+    "id": "mb800_025",
+    "question": "You need to define how transactions post to G/L based on customer and item. What should you use?",
+    "options": [
+      "General Posting Setup",
+      "Dimensions",
+      "Number Series",
+      "Workflows"
+    ],
+    "correctAnswer": 0,
+    "explanation": "General Posting Setup maps combinations to accounts."
+  },
+  {
+    "id": "mb800_026",
+    "question": "You need to enforce approval before posting purchase orders above a threshold. What should you configure?",
+    "options": [
+      "Approval Workflow",
+      "Posting Groups",
+      "Dimensions",
+      "Templates"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Workflows automate approvals based on conditions."
+  },
+  {
+    "id": "mb800_027",
+    "question": "You need to ensure all users see the same customised pages. What should you configure?",
+    "options": [
+      "Profiles",
+      "User Personalisation",
+      "Permissions",
+      "Dimensions"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Profiles control shared UI customisations."
+  },
+  {
+    "id": "mb800_028",
+    "question": "You need to import large datasets from Excel. What should you use?",
+    "options": [
+      "Configuration Packages",
+      "Edit in Excel",
+      "Dimensions",
+      "Posting Groups"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Configuration packages handle structured imports."
+  },
+  {
+    "id": "mb800_029",
+    "question": "You need to assign default accounts for customers and vendors. What should you configure?",
+    "options": ["Posting Groups", "Dimensions", "Templates", "Number Series"],
+    "correctAnswer": 0,
+    "explanation": "Posting groups automate account assignments."
+  },
+  {
+    "id": "mb800_030",
+    "question": "You need to track tax calculations automatically. What should you configure?",
+    "options": [
+      "VAT Posting Groups",
+      "Dimensions",
+      "General Journals",
+      "Templates"
+    ],
+    "correctAnswer": 0,
+    "explanation": "VAT posting groups control tax logic."
+  },
+
+  {
+    "id": "mb800_031",
+    "question": "You need to define how inventory transactions post to G/L. What should you configure?",
+    "options": [
+      "Inventory Posting Groups",
+      "Dimensions",
+      "Templates",
+      "Workflows"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Inventory posting groups map inventory movements to accounts."
+  },
+  {
+    "id": "mb800_032",
+    "question": "You need to ensure financial reporting aligns with company structure. What should you configure?",
+    "options": [
+      "Account Categories",
+      "Dimensions",
+      "Posting Groups",
+      "Templates"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Account categories organise financial reporting."
+  },
+  {
+    "id": "mb800_033",
+    "question": "You need to create a company without demo data. What should you select?",
+    "options": [
+      "Production - Setup Data Only",
+      "Evaluation - Basic Setup",
+      "CRONUS",
+      "Create New - No Data"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Production setup includes structure but no demo data."
+  },
+  {
+    "id": "mb800_034",
+    "question": "You need to allow multiple currencies in payments. What should you enable?",
+    "options": [
+      "Application of Ledger Entries in Different Currencies",
+      "VAT Posting Groups",
+      "Dimensions",
+      "Templates"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This enables cross-currency application."
+  },
+  {
+    "id": "mb800_035",
+    "question": "You need to handle recurring sales lines. What should you use?",
+    "options": [
+      "Get Recurring Sales Lines",
+      "Templates",
+      "Posting Groups",
+      "Dimensions"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This pulls predefined recurring lines."
+  },
+  {
+    "id": "mb800_036",
+    "question": "You need to reverse a sales transaction. What should you create?",
+    "options": [
+      "Sales Credit Memo",
+      "General Journal",
+      "Purchase Invoice",
+      "Item Journal"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Credit memos reverse sales."
+  },
+  {
+    "id": "mb800_037",
+    "question": "You need to track item availability across locations. What should you use?",
+    "options": [
+      "Item Availability by Location",
+      "Dimensions",
+      "Posting Groups",
+      "Templates"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This provides real-time inventory visibility."
+  },
+  {
+    "id": "mb800_038",
+    "question": "You need to handle drop shipments. What should you configure?",
+    "options": [
+      "Mark sales order as drop shipment",
+      "Create separate purchase order manually",
+      "Use general journal",
+      "Use item journal"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Drop shipment flag links sales and purchase."
+  },
+  {
+    "id": "mb800_039",
+    "question": "You need to combine multiple return receipts into one credit memo. What should you use?",
+    "options": [
+      "Get Return Receipt Lines",
+      "General Journal",
+      "Posting Groups",
+      "Dimensions"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This combines return lines efficiently."
+  },
+  {
+    "id": "mb800_040",
+    "question": "You need to reconcile bank transactions with missing entries. What should you use?",
+    "options": [
+      "Transfer to General Journal",
+      "Dimensions",
+      "Posting Groups",
+      "Templates"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This creates missing ledger entries."
+  },
+  {
+    "id": "mb800_061",
+    "question": "A new subsidiary needs its own chart of accounts and payment terms, but setup should stay consistent with the parent company. What should you do?",
+    "options": [
+      "Create the subsidiary using Production - Setup Data Only",
+      "Define tables with a configuration worksheet and create a package",
+      "Copy the parent company directly and edit live data",
+      "Use Evaluation - Basic Setup"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A configuration worksheet and package let you build a consistent but customised setup safely and efficiently."
+  },
+  {
+    "id": "mb800_062",
+    "question": "You need to set up a new company for a trial period and import the organisation's data. Which option best describes the correct approach?",
+    "options": [
+      "Use Production - Setup Data Only, import data with a configuration package, then access the company through My Settings",
+      "Use Create New - No Data, manually enter all records, then open the role centre",
+      "Use Evaluation - Basic Setup and skip data import",
+      "Use CRONUS and rename it"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The supported approach is Production - Setup Data Only plus configuration package import and then access via My Settings."
+  },
+  {
+    "id": "mb800_063",
+    "question": "You are migrating Business Central on-premises to online and need uninterrupted user access. What should you do?",
+    "options": [
+      "Retain user permissions and start migration from the target company",
+      "Give all users temporary admin rights and migrate from CRONUS",
+      "Modify SQL settings and remove permissions until cutover",
+      "Disable access and recreate users later"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Retaining permissions and starting from the actual target company preserves continuity and security."
+  },
+  {
+    "id": "mb800_064",
+    "question": "You need to track configuration changes, prepare packages, and reuse configuration across environments. What should you use?",
+    "options": [
+      "Configuration Worksheet",
+      "Microsoft Excel workbook",
+      "Company Information",
+      "Assisted Setup only"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Configuration Worksheet is the BC tool used to define and manage reusable configuration packages."
+  },
+  {
+    "id": "mb800_065",
+    "question": "You exported a configuration worksheet to Excel, edited it, and now need to import the updated data back. What should you use?",
+    "options": [
+      "Data Migration assisted setup guide",
+      "Configuration Packages page",
+      "Edit in Excel",
+      "General Ledger Setup"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Edited worksheet/package data is reimported through Configuration Packages, not Data Migration."
+  },
+  {
+    "id": "mb800_066",
+    "question": "You need to create a new user group by copying all permission sets from an existing user group. What should you do?",
+    "options": [
+      "Use Copy User Group on the existing user group",
+      "Create a new group manually and add users first",
+      "Duplicate the User Setup page",
+      "Export the group to Excel and reimport it"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Copy User Group is the built-in fastest way to duplicate permissions from an existing group."
+  },
+  {
+    "id": "mb800_067",
+    "question": "A user needs enough access to create sales orders and sales invoices while following least privilege. What should you do?",
+    "options": [
+      "Assign SUPER",
+      "Assign D365 BASIC and create a custom permission set for the needed sales actions",
+      "Create one custom permission set only and remove D365 BASIC",
+      "Assign only D365 BASIC"
+    ],
+    "correctAnswer": 1,
+    "explanation": "D365 BASIC provides baseline access, and the custom permission set adds only the extra rights required."
+  },
+  {
+    "id": "mb800_068",
+    "question": "You want all users assigned to a profile to see customised pages. From the Profile page, what should you do?",
+    "options": [
+      "Select Manage customized pages",
+      "Select Edit",
+      "Select Copy Profile",
+      "Select New"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Profile-level page customisation starts through Edit, which then allows page customisation for all users on that profile."
+  },
+  {
+    "id": "mb800_069",
+    "question": "Posting fails because a dimension used on non-posted documents was deleted. What should you do?",
+    "options": [
+      "Create a new replacement dimension and continue posting",
+      "Restore the missing dimension and find non-posted documents that reference it",
+      "Edit posted transactions to remove the old dimension",
+      "Ignore the issue because posted reports are unaffected"
+    ],
+    "correctAnswer": 1,
+    "explanation": "You restore the missing dimension and correct the non-posted documents that still reference it."
+  },
+  {
+    "id": "mb800_070",
+    "question": "Posting fails because of blocked dimension combinations. What should you do?",
+    "options": [
+      "Delete and recreate the dimensions",
+      "Find non-posted documents containing the blocked combination and unblock it",
+      "Edit posted transactions manually",
+      "Disable dimension checking"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is a setup restriction issue, so you locate the affected non-posted documents and unblock the combination."
+  },
+  {
+    "id": "mb800_071",
+    "question": "You need a workflow that creates an approval request when a general journal batch is released. What should you configure?",
+    "options": [
+      "A workflow with event 'A general journal batch is released' and response 'Create an approval request for the record using approver type Workflow User Group'",
+      "A report schedule to email journals for approval",
+      "A journal template with manual approval notes",
+      "A custom extension to block posting"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The standard BC workflow engine supports this exact approval scenario."
+  },
+  {
+    "id": "mb800_072",
+    "question": "Purchase orders above a certain amount must trigger approval automatically. Which feature should you configure?",
+    "options": [
+      "Notification rule",
+      "Approval workflow with conditions for purchase order amount",
+      "Mandatory Approval setting on the page only",
+      "Purchase & Payables Setup for manual approval"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Conditional logic based on amount is handled by approval workflows."
+  },
+  {
+    "id": "mb800_073",
+    "question": "In which Business Central scenario is Microsoft Word used?",
+    "options": [
+      "Changing the layout of outgoing documents",
+      "Editing master data in bulk",
+      "Analysing telemetry data",
+      "Building posting groups"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Word is used for document layouts, such as invoices and other outgoing documents."
+  },
+  {
+    "id": "mb800_074",
+    "question": "Multiple Business Central companies sync to one Dataverse environment. How do you distinguish records by source company?",
+    "options": [
+      "Create a separate Dataverse environment for each company",
+      "Set a company ID on the Dataverse entity during synchronisation",
+      "Only sync active records",
+      "Use default sync with no custom field"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A company identifier is the clean way to preserve source-company context in a shared Dataverse environment."
+  },
+  {
+    "id": "mb800_075",
+    "question": "You need to streamline default G/L posting assignments for customers and vendors. Which option best reflects the correct setup?",
+    "options": [
+      "Set up General Posting Groups, VAT Posting Groups, and Inventory Posting Groups",
+      "Give all customers and vendors the same default G/L account",
+      "Use one posting group for all transactions",
+      "Use multicurrency setup instead"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Those posting groups together support posting efficiency, tax automation, and inventory-linked accounts."
+  },
+  {
+    "id": "mb800_076",
+    "question": "You need deferrals calculated based on the number of days in each period. What should you choose?",
+    "options": [
+      "Straight-Line",
+      "Equal per Period",
+      "Days per Period",
+      "User-Defined"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Days per Period is the day-based calculation method."
+  },
+  {
+    "id": "mb800_077",
+    "question": "You want to apply payments to invoices in foreign currencies. What should you enable?",
+    "options": [
+      "Application of Ledger Entries in Different Currencies",
+      "Invoice Rounding",
+      "Multiple Interest Rates",
+      "Cash Customers"
+    ],
+    "correctAnswer": 0,
+    "explanation": "That feature specifically supports cross-currency application of ledger entries."
+  },
+  {
+    "id": "mb800_078",
+    "question": "You need to assign main accounts to newly created main account categories. What should you do?",
+    "options": [
+      "Assign each G/L account to a category using the account category field or mapping tool in the Chart of Accounts",
+      "Use posting groups only",
+      "Create new dimensions for categories",
+      "Change the number series for the accounts"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Main account categories are linked through the Chart of Accounts mapping process."
+  },
+  {
+    "id": "mb800_079",
+    "question": "You need financial reports to align with the organisational structure of accounts. What should you do?",
+    "options": [
+      "Create detailed account subcategories and map G/L accounts to categories",
+      "Use allocation accounts only",
+      "Put all accounts in one category",
+      "Generate reports without account mapping"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Detailed categories and mapped accounts are what make the reports structurally meaningful."
+  },
+  {
+    "id": "mb800_080",
+    "question": "Inventory transactions must post correctly to the general ledger. What should you do?",
+    "options": [
+      "Post all inventory transactions to one single G/L account",
+      "Enter every possible combination of general business and general product posting groups in the General Posting Setup matrix",
+      "Use dimensions instead of posting setup",
+      "Use only Inventory Posting Groups without General Posting Setup"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The General Posting Setup matrix needs the valid business/product combinations for correct posting."
+  },
+  {
+    "id": "mb800_081",
+    "question": "You started selling new products and resources and need to track sales by product and purchases by item. Which posting groups should you configure?",
+    "options": [
+      "General Product Posting Groups, General Business Posting Groups, and Inventory Posting Groups",
+      "Customer Posting Groups, Vendor Posting Groups, and Bank Posting Groups",
+      "Only General Product Posting Groups",
+      "Only Inventory Posting Groups"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Those three together cover product type, business context, and inventory posting."
+  },
+  {
+    "id": "mb800_082",
+    "question": "The finance team needs to categorise transactions by region and product type. What should you configure?",
+    "options": [
+      "Customer Posting Groups by region and Vendor Posting Groups by type",
+      "General Business Posting Groups by region and General Product Posting Groups by type",
+      "VAT Posting Groups by region and Customer Posting Groups by type",
+      "Dimensions only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "General Business = who/region side, General Product = product/type side."
+  },
+  {
+    "id": "mb800_083",
+    "question": "A bank account must automatically handle transactions in the correct currency and reconcile properly. What should you do?",
+    "options": [
+      "Use recurring journals for each foreign currency",
+      "Link the bank account to a chart of accounts entry through the assigned bank account posting group",
+      "Create a new G/L account for every payment",
+      "Use dimensions for currency mapping"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The bank account posting group links the BC bank account to the correct G/L account."
+  },
+  {
+    "id": "mb800_084",
+    "question": "You want to analyse sales by customer segment. What should you do?",
+    "options": [
+      "Create unique general business posting groups based on customer segments such as geography and industry",
+      "Use one default general business posting group for all customers",
+      "Use general product posting groups instead",
+      "Use ship-to codes only"
+    ],
+    "correctAnswer": 0,
+    "explanation": "General Business Posting Groups are used to classify customers/vendors for posting and analysis."
+  },
+  {
+    "id": "mb800_085",
+    "question": "Sales lines should suggest creating a new item when no existing item matches the description entered. Which setting should you enable?",
+    "options": [
+      "Default Posting Date",
+      "Create Item from Description",
+      "Copy Customer Name to Entries",
+      "Post Bank Deposits as Lump Sum"
+    ],
+    "correctAnswer": 1,
+    "explanation": "That field enables the item-creation suggestion during sales entry."
+  },
+  {
+    "id": "mb800_086",
+    "question": "You want to automate the application of customer payments to open ledger entries. What should you do?",
+    "options": [
+      "Create a new general journal batch for each payment",
+      "Set up rules for automatic application of payments on the Payment Application Rules page",
+      "Post payments directly to the G/L",
+      "Increase staff to apply payments manually"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Payment Application Rules automate how customer payments are matched to open entries."
+  },
+  {
+    "id": "mb800_087",
+    "question": "You need to update a customer record to support automated payments and improve cash flow visibility. What is the correct approach?",
+    "options": [
+      "Open the customer card, expand the Payments FastTab with Show more, and fill in the fields as needed",
+      "Disable the Payments FastTab",
+      "Ignore the Payments FastTab and only update dimensions",
+      "Close the customer card without changes"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The relevant payment and cash-management settings are configured directly on the customer card."
+  },
+  {
+    "id": "mb800_088",
+    "question": "A customer wants a default alternate shipping address for future orders. What should you use?",
+    "options": [
+      "Edit the main Customer Card address only",
+      "Use the Ship-to Code field to set the default address",
+      "Create a second customer card",
+      "Change the Address & Contact FastTab only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ship-to Code is the supported way to define a default alternate shipping address."
+  },
+  {
+    "id": "mb800_089",
+    "question": "Vehicles have varying useful lives and salvage values. Which depreciation method is the most flexible?",
+    "options": ["Straight-Line", "Declining", "User-Defined", "Manual"],
+    "correctAnswer": 2,
+    "explanation": "User-defined depreciation allows custom schedules tailored to different asset profiles."
+  },
+  {
+    "id": "mb800_090",
+    "question": "You need higher depreciation in early years and lower depreciation later. Which method should you use?",
+    "options": ["Straight-Line", "Declining", "User-Defined", "Manual"],
+    "correctAnswer": 1,
+    "explanation": "Declining balance is the standard accelerated depreciation method."
+  },
+  {
+    "id": "mb800_091",
+    "question": "A sale of 10 units was posted. Which inventory-related entry is correct?",
+    "options": [
+      "Item Ledger Entry with Sale entry type, Cost Amount (Actual) negative, and Quantity -10",
+      "Value Entry with Indirect Cost entry type and Quantity +10",
+      "No item ledger entry is created on sale",
+      "Inventory is increased by 10"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A sale reduces inventory, so the quantity and associated value move negatively."
+  },
+  {
+    "id": "mb800_092",
+    "question": "You need to sell warranties and service contracts without affecting inventory levels or costing. What should you do?",
+    "options": [
+      "Use Catalog Items",
+      "Create new item cards with type set to Non-Inventory",
+      "Adjust inventory manually after sale",
+      "Build a custom solution"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Non-Inventory item cards are the standard way to sell such items without stock impact."
+  },
+  {
+    "id": "mb800_093",
+    "question": "You need real-time visibility into item availability by location. What should you use?",
+    "options": [
+      "Create separate item cards for each location",
+      "Item Availability by Location",
+      "Manual stock spreadsheets",
+      "A third-party inventory tracker"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Business Central already provides this view through Item Availability by Location."
+  },
+  {
+    "id": "mb800_094",
+    "question": "Purchase invoices must only be posted when linked to a corresponding receipt. Which option best describes the correct setup?",
+    "options": [
+      "Create purchase invoices from posted purchase receipts, require Receive and Invoice, and set Purch. Invoice Posting Policy to Mandatory",
+      "Turn on Automatic Cost Posting and allow direct invoice posting",
+      "Use Check Prepmt. when Posting only",
+      "Use Exact Cost Reversing Mandatory"
+    ],
+    "correctAnswer": 0,
+    "explanation": "That combination enforces the receipt-first control properly."
+  },
+  {
+    "id": "mb800_095",
+    "question": "You need to track packages shipped through shipping agents and include shipping times in order promising. What should you do?",
+    "options": [
+      "Set up shipping agents with internet addresses and assign shipping agent services to sales lines",
+      "Update tracking numbers manually only",
+      "Create a custom extension for every carrier",
+      "Use dimensions to estimate shipping times"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Shipping agents handle package tracking, and shipping agent services feed timing into order promising."
+  },
+  {
+    "id": "mb800_096",
+    "question": "Invoice discounts based on total invoice amounts should apply automatically. What should you configure?",
+    "options": [
+      "Vend. Invoice Discounts page linked to vendor cards",
+      "General Ledger Setup",
+      "Custom scripting",
+      "Manual invoice adjustments only"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Invoice discount terms are maintained on the vendor invoice discount setup and linked to the vendor."
+  },
+  {
+    "id": "mb800_097",
+    "question": "Discounts with the same pricing priority should compound and compete against best price discounts with that same priority. Which setting should you configure?",
+    "options": [
+      "Best price only within priority and always compound across priorities",
+      "Best price and compound within priority, never compound across priorities",
+      "Always compound across all priorities",
+      "Best price only, never compound"
+    ],
+    "correctAnswer": 1,
+    "explanation": "That setting matches the required pricing behaviour exactly."
+  },
+  {
+    "id": "mb800_098",
+    "question": "The IT department wants to analyse telemetry data for performance monitoring. What should they use?",
+    "options": [
+      "General Ledger",
+      "Inspect pages and data",
+      "Edit in Excel",
+      "Account Schedules"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Inspect pages and data is the relevant built-in feature for page/data inspection and telemetry-style analysis."
+  },
+  {
+    "id": "mb800_099",
+    "question": "Designer extension source code in sandbox environments must not be lost during updates or relocation. What should developers do?",
+    "options": [
+      "Push changes to production automatically from sandbox",
+      "Regularly download and back up the Designer extension source, and use Visual Studio Code with version control",
+      "Disable Designer completely",
+      "Rebuild the extension from scratch after each update"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Backup plus proper source control is the safe and scalable approach."
+  },
+  {
+    "id": "mb800_100",
+    "question": "The vendor delivers items directly to the customer. How should sales orders for drop shipments be handled?",
+    "options": [
+      "Create a sales order and mark it for drop shipment",
+      "Create a purchase order only and skip the sales order",
+      "Ship from your own warehouse first",
+      "Use a general journal"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Marking the sales order for drop shipment tells BC to handle the special vendor-to-customer flow."
+  },
+  {
+    "id": "mb800_101",
+    "question": "Certain customers have monthly replenishment orders. How should recurring sales lines be added to orders?",
+    "options": [
+      "Manually retype them each time",
+      "Use Get Recurring Sales Lines",
+      "Copy the last posted invoice manually",
+      "Create a new item template"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Get Recurring Sales Lines is the built-in action for this exact scenario."
+  },
+  {
+    "id": "mb800_102",
+    "question": "You need to automate payment reconciliation. What should you do?",
+    "options": [
+      "Enable Automatic Application and set up bank account integration to import and match payment transactions",
+      "Use Merge Duplicate Records",
+      "Reconcile only in Excel",
+      "Install a third-party reconciliation tool first"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Automatic Application plus bank integration is the standard BC automation approach."
+  },
+  {
+    "id": "mb800_103",
+    "question": "A customer has multiple return orders but wants one consolidated credit memo. Which option best describes the correct approach?",
+    "options": [
+      "Create one sales credit memo per return receipt",
+      "Use Get Return Receipt Lines, use Combine Return Receipts, or manually create a new sales credit memo and copy receipt lines",
+      "Use Copy Document on the original sales orders",
+      "Post each sales return order separately only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Those are the supported ways to consolidate return receipts into one credit memo."
+  },
+  {
+    "id": "mb800_104",
+    "question": "A full vendor delivery has been received against a purchase order. What should you do?",
+    "options": [
+      "Find the purchase order and compare Qty. to Receive with the vendor document, correcting differences if needed",
+      "Delete the original purchase order and recreate it",
+      "Create a new purchase invoice only",
+      "Post a general journal instead"
+    ],
+    "correctAnswer": 0,
+    "explanation": "That is the standard receipt process for a purchase order."
+  },
+  {
+    "id": "mb800_105",
+    "question": "You need to support different sales tax scenarios correctly. What should you do?",
+    "options": [
+      "Set up individual ledger posting groups for each sales tax code, or use one ledger posting group for all sales tax codes as appropriate",
+      "Calculate all tax manually",
+      "Assign multiple groups to one tax code at random",
+      "Use one group for every transaction regardless of design"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The system needs the tax posting structure configured properly so tax can calculate and post correctly."
+  },
+  {
+    "id": "mb800_106",
+    "question": "The company wants automated posting to the general ledger while maintaining accuracy and reliability. Which features should you use?",
+    "options": [
+      "Financial period close workspace for reconciliation and general journals for recording financial transactions",
+      "Power BI and Excel",
+      "Manual G/L entries only",
+      "Dimensions and profiles"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Those are the two features identified in the assessment for this record-to-report scenario."
+  },
+  {
+    "id": "mb800_107",
+    "question": "There are discrepancies in bank account reconciliation. What should you do?",
+    "options": [
+      "Clear Bank Recon. with Auto. Match in General Ledger Setup",
+      "Manually match the bank statement lines with bank account ledger entries and correct mismatched information",
+      "Undo all previous reconciliations",
+      "Increase date tolerance until items match"
+    ],
+    "correctAnswer": 1,
+    "explanation": "When the issue is bad or mismatched information, the fix is review, correction, and manual matching."
+  },
+  {
+    "id": "mb800_108",
+    "question": "Some bank reconciliation transactions are not matching because of differences in information like amounts or names. What should you do?",
+    "options": [
+      "Post all unmatched transactions as expenses",
+      "Review the information and manually match the statement line to the correct bank ledger entry after corrections",
+      "Ignore unmatched transactions",
+      "Adjust Balance Last Statement"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Valid transactions with mismatched details need correction and then manual matching."
+  },
+  {
+    "id": "mb800_109",
+    "question": "You need a user-defined depreciation method where yearly percentages change for the first five years and stay constant for the next five. What should you do?",
+    "options": [
+      "Set Depreciation Method to User-Defined, assign the book, and skip the depreciation table",
+      "Set Depreciation Method to User-Defined, enter yearly percentages in the depreciation table, and specify the relevant dates",
+      "Use Manual depreciation and add notes",
+      "Use Declining and adjust it later"
+    ],
+    "correctAnswer": 1,
+    "explanation": "User-defined depreciation only works properly when you complete the depreciation table and dates."
+  },
+  {
+    "id": "mb800_110",
+    "question": "A fixed asset was first depreciated using declining balance, but future depreciation should use straight-line while preserving posted entries. What should you do?",
+    "options": [
+      "Create a new asset",
+      "Change the depreciation method in the existing depreciation book and recalculate the depreciation",
+      "Delete the old depreciation entries",
+      "Create a second depreciation book and stop using the first immediately"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Changing the existing depreciation book affects future calculations while preserving history."
+  }
+]
