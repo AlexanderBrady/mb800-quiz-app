@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { CheckCircle2, XCircle, Award, RotateCcw } from "lucide-react";
 import quizData from "../imports/pasted_text/business-central-quiz.json";
@@ -13,7 +13,7 @@ interface Question {
   topic?: string;
 }
 
-type QuizState = "quiz" | "results";
+type QuizState = "quiz" | "results" | "review";
 
 export default function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -22,15 +22,53 @@ export default function App() {
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState<boolean[]>([]);
   const [quizState, setQuizState] = useState<QuizState>("quiz");
+  const [sessionSeed, setSessionSeed] = useState(0);
+  const [reviewQuestions, setReviewQuestions] = useState<Question[]>([]);
 
   const SESSION_SIZE = 20;
+  const allQuestions: Question[] = quizData;
 
-  const [questions, setQuestions] = useState<Question[]>([]);
+  const questions = useMemo(() => {
+    const shuffleArray = <T,>(arr: T[]): T[] => {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    };
 
-  useEffect(() => {
-    const shuffled = [...quizData].sort(() => Math.random() - 0.5);
-    setQuestions(shuffled.slice(0, SESSION_SIZE));
-  }, []);
+    if (quizState === "review") {
+      return reviewQuestions;
+    }
+
+    return shuffleArray(allQuestions)
+      .slice(0, SESSION_SIZE)
+      .map((q) => {
+        const originalCorrectIndex = q.correctAnswer ?? q.correct;
+
+        if (
+          originalCorrectIndex === undefined ||
+          originalCorrectIndex < 0 ||
+          originalCorrectIndex >= q.options.length
+        ) {
+          return q;
+        }
+
+        const optionObjects = q.options.map((option, index) => ({
+          option,
+          isCorrect: index === originalCorrectIndex,
+        }));
+
+        const shuffledOptions = shuffleArray(optionObjects);
+
+        return {
+          ...q,
+          options: shuffledOptions.map((item) => item.option),
+          correctAnswer: shuffledOptions.findIndex((item) => item.isCorrect),
+        };
+      });
+  }, [allQuestions, quizState, reviewQuestions, sessionSeed]);
 
   const progress =
     questions.length > 0 ? ((currentQuestion + 1) / questions.length) * 100 : 0;
@@ -69,8 +107,16 @@ export default function App() {
 
     const correctIndex =
       questions[currentQuestion].correctAnswer ??
-      questions[currentQuestion].correct ??
-      0;
+      questions[currentQuestion].correct;
+
+    if (correctIndex === undefined) {
+      console.error(
+        "Missing correct answer for question:",
+        questions[currentQuestion],
+      );
+      return;
+    }
+
     const isCorrect = index === correctIndex;
     if (isCorrect) {
       setScore(score + 1);
@@ -89,15 +135,14 @@ export default function App() {
   };
 
   const resetQuiz = () => {
-    const shuffled = [...quizData].sort(() => Math.random() - 0.5);
-    setQuestions(shuffled.slice(0, SESSION_SIZE));
-
     setCurrentQuestion(0);
     setSelectedAnswer(null);
     setShowExplanation(false);
     setScore(0);
     setAnswers([]);
+    setReviewQuestions([]);
     setQuizState("quiz");
+    setSessionSeed((prev) => prev + 1);
   };
 
   if (quizState === "results") {
@@ -191,12 +236,32 @@ export default function App() {
             </div>
           )}
 
+          {score < questions.length && (
+            <button
+              onClick={() => {
+                const incorrectQuestions = questions.filter(
+                  (_, i) => !answers[i],
+                );
+                setReviewQuestions(incorrectQuestions);
+                setCurrentQuestion(0);
+                setSelectedAnswer(null);
+                setShowExplanation(false);
+                setScore(0);
+                setAnswers([]);
+                setQuizState("review");
+              }}
+              className="w-full mb-4 bg-white border-2 border-blue-500 text-blue-600 py-4 rounded-xl font-semibold text-lg hover:bg-blue-50 transition-all duration-300"
+            >
+              Retry Incorrect Questions
+            </button>
+          )}
+
           <button
             onClick={resetQuiz}
             className="w-full bg-gradient-to-r from-emerald-500 to-blue-500 text-white py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
           >
             <RotateCcw className="w-5 h-5" />
-            Retake Quiz
+            Start New Quiz
           </button>
         </motion.div>
       </div>
@@ -239,7 +304,11 @@ export default function App() {
     );
   }
 
-  const correctAnswerIndex = currentQ.correctAnswer ?? currentQ.correct ?? 0;
+  const correctAnswerIndex = currentQ.correctAnswer ?? currentQ.correct;
+  if (correctAnswerIndex === undefined) {
+    console.error("Missing correct answer for question:", currentQ);
+    return null;
+  }
   const isCorrect = selectedAnswer === correctAnswerIndex;
 
   return (
@@ -260,7 +329,9 @@ export default function App() {
                 color: "#1a1a1a",
               }}
             >
-              Business Central Quiz
+              {quizState === "review"
+                ? "Review Incorrect Questions"
+                : "Business Central Quiz"}
             </h1>
             <div className="text-right">
               <div className="text-sm text-gray-500">Question</div>
