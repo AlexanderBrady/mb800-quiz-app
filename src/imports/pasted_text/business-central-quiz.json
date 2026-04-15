@@ -37,7 +37,7 @@
   },
   {
     "id": "mb800_004",
-    "question": "You need to configure General Posting Setup efficiently using a chart of accounts. What are valid approaches?",
+    "question": "You have prepared General Posting Setup data outside Business Central and need to bring it into the system efficiently. What should you use?",
     "options": [
       "Use Copy action",
       "Import configuration package",
@@ -45,7 +45,7 @@
       "Manually create all combinations only"
     ],
     "correctAnswer": 1,
-    "explanation": "Configuration packages are the most scalable approach."
+    "explanation": "A configuration package is the built-in way to import structured setup data into Business Central."
   },
   {
     "id": "mb800_005",
@@ -68,10 +68,10 @@
   },
   {
     "id": "mb800_007",
-    "question": "The G/L account for accounts receivable must match the sum of all customer balances. What should you configure?",
+    "question": "Which G/L account field is used to define how accounts roll up into totals and headings in the chart of accounts?",
     "options": ["Account Type", "Blocked", "Totaling", "Direct Posting"],
     "correctAnswer": 2,
-    "explanation": "Totaling ensures correct roll-up."
+    "explanation": "The Totaling field controls rollups and headings in the chart of accounts."
   },
   {
     "id": "mb800_008",
@@ -112,7 +112,7 @@
 
   {
     "id": "mb800_011",
-    "question": "You need to configure General Posting Setup efficiently. Which actions are valid?",
+    "question": "You need to import General Posting Setup records from a prepared external data file. Which action should you use?",
     "options": [
       "Import configuration package",
       "Use Suggest Accounts",
@@ -120,11 +120,11 @@
       "Delete all accounts"
     ],
     "correctAnswer": 0,
-    "explanation": "Multiple valid approaches exist, config packages are key."
+    "explanation": "Configuration packages are used to import prepared setup data into Business Central."
   },
   {
     "id": "mb800_012",
-    "question": "You need to configure receipt of quantities greater than ordered. Which options are valid?",
+    "question": "You want a specific item to allow receipt of quantities greater than ordered. Which option should you configure on the item?",
     "options": [
       "Use over-receipt code on item",
       "Use over-receipt code on vendor",
@@ -132,7 +132,7 @@
       "Disable receiving"
     ],
     "correctAnswer": 0,
-    "explanation": "Over-receipt codes control excess receiving."
+    "explanation": "An over-receipt code on the item record allows that item to be received above the ordered quantity, subject to setup."
   },
   {
     "id": "mb800_013",
@@ -198,10 +198,10 @@
   },
   {
     "id": "mb800_019",
-    "question": "Which item type is used for services sold without stock?",
+    "question": "Which item type is designed for labour or service work rather than stocked goods?",
     "options": ["Inventory", "Service", "Non-inventory", "Resource"],
     "correctAnswer": 1,
-    "explanation": "Service items represent labour/services."
+    "explanation": "Service items represent labour or service work rather than inventory tracked in stock."
   },
   {
     "id": "mb800_020",
@@ -284,7 +284,7 @@
   },
   {
     "id": "mb800_027",
-    "question": "You need to ensure all users see the same customised pages. What should you configure?",
+    "question": "Which feature controls page customisations that should be shared by all users assigned the same role/profile?",
     "options": [
       "Profiles",
       "User Personalisation",
@@ -292,7 +292,7 @@
       "Dimensions"
     ],
     "correctAnswer": 0,
-    "explanation": "Profiles control shared UI customisations."
+    "explanation": "Profiles are used to apply shared page customisations to groups of users with the same role/profile."
   },
   {
     "id": "mb800_028",
@@ -308,10 +308,10 @@
   },
   {
     "id": "mb800_029",
-    "question": "You need to assign default accounts for customers and vendors. What should you configure?",
+    "question": "Which setup category is used to automate default account assignments for customers and vendors?",
     "options": ["Posting Groups", "Dimensions", "Templates", "Number Series"],
     "correctAnswer": 0,
-    "explanation": "Posting groups automate account assignments."
+    "explanation": "Posting groups are the Business Central setup category used to automate default account assignments and posting behavior."
   },
   {
     "id": "mb800_030",
@@ -858,7 +858,7 @@
   },
   {
     "id": "mb800_096",
-    "question": "Invoice discounts based on total invoice amounts should apply automatically. What should you configure?",
+    "question": "Purchase invoice discounts based on total invoice amounts should apply automatically for vendors. What should you configure?",
     "options": [
       "Vend. Invoice Discounts page linked to vendor cards",
       "General Ledger Setup",
@@ -866,7 +866,7 @@
       "Manual invoice adjustments only"
     ],
     "correctAnswer": 0,
-    "explanation": "Invoice discount terms are maintained on the vendor invoice discount setup and linked to the vendor."
+    "explanation": "Vendor invoice discount terms are maintained on the Vend. Invoice Discounts page and linked to vendor cards."
   },
   {
     "id": "mb800_097",
@@ -978,7 +978,7 @@
   },
   {
     "id": "mb800_106",
-    "question": "The company wants automated posting to the general ledger while maintaining accuracy and reliability. Which features should you use?",
+    "question": "Which pair of features best supports journal-based financial transaction entry and period-end account reconciliation?",
     "options": [
       "Financial period close workspace for reconciliation and general journals for recording financial transactions",
       "Power BI and Excel",
@@ -986,7 +986,7 @@
       "Dimensions and profiles"
     ],
     "correctAnswer": 0,
-    "explanation": "Those are the two features identified in the assessment for this record-to-report scenario."
+    "explanation": "General journals are used to record financial transactions, and the financial period close workspace supports reconciliation activities."
   },
   {
     "id": "mb800_107",
