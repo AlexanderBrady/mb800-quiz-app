@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { CheckCircle2, XCircle, Award, RotateCcw } from "lucide-react";
 import quizData from "../imports/pasted_text/business-central-quiz.json";
@@ -22,12 +22,14 @@ export default function App() {
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState<boolean[]>([]);
   const [quizState, setQuizState] = useState<QuizState>("quiz");
+  const [sessionSeed, setSessionSeed] = useState(0);
 
   const SESSION_SIZE = 15;
   const allQuestions: Question[] = quizData;
-  // Limit each quiz run to a 15-question session, shuffled randomly
-  const shuffledQuestions = [...allQuestions].sort(() => Math.random() - 0.5);
-  const questions = shuffledQuestions.slice(0, SESSION_SIZE);
+  const questions = useMemo(() => {
+    const shuffledQuestions = [...allQuestions].sort(() => Math.random() - 0.5);
+    return shuffledQuestions.slice(0, SESSION_SIZE);
+  }, [allQuestions, sessionSeed]);
   const progress = ((currentQuestion + 1) / questions.length) * 100;
 
   // Safety check: if questions array is empty or current question is invalid
@@ -90,6 +92,7 @@ export default function App() {
     setScore(0);
     setAnswers([]);
     setQuizState("quiz");
+    setSessionSeed((prev) => prev + 1);
   };
 
   if (quizState === "results") {
